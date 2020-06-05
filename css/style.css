@@ -1,4 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .my-main-container {
   height: 920px;
   background-color: gray;
+}
+.my-navbar-color {
+  background-color: greenyellow !important;
+}
+.my-brand {
+  display: block;
+  text-decoration: none;
+  text-align: center;
 }
