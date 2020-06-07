@@ -4,13 +4,29 @@ body {
 }
 .my-main-container {
   height: 920px;
-  background-color: gray;
+  background-color: chartreuse;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .my-navbar-color {
-  background-color: greenyellow !important;
+  display: block !important;
+  background-color: chartreuse !important;
+  text-align: center !important;
+  margin: 0;
 }
 .my-brand {
-  display: block;
   text-decoration: none;
-  text-align: center;
+  font-family: "Metal Mania", cursive;
+  padding: 10px;
+  font-size: 30px;
+}
+.info {
+  width: 100%;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 920px;
+}
+.info-color {
+  background-color: cornflowerblue;
 }
