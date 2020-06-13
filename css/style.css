@@ -70,10 +70,12 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url(/image/download.png);
 }
 .img-box img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 .about {
   width: 100%;
@@ -87,11 +89,13 @@ body {
   border-radius: 10%;
   border: rgba(255, 105, 180, 0.377) 1px solid;
   position: absolute;
-  bottom: 15%;
+  bottom: 13%;
   left: 32.5%;
+  cursor: pointer;
+  padding: 5px;
 }
 .download {
-  left: 63%;
+  left: 61.5%;
 }
 .file {
   color: white;

@@ -16,8 +16,7 @@
       rel="stylesheet"
       href="/fontawesome-free-5.13.0-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="/jquary/jquery.js" />
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/jquery/jquery-3.5.1.min.map"></script>
     <title>Change Fram</title>
   </head>
   <body>
@@ -30,25 +29,22 @@
       <div class="row">
         <div class="col-lg info info-color">
           <div class="box">
-            <div
-              class="img-box"
-              style="
-                background-image: url(/image/229af48bc7939cafe0c1bf4e37c269ff.jpg);
-              "
-            >
-              <img
-                src="/image/circle-plant-oval-for-frame-5e380c5e89c1d7.71664322.png"
-              />
+            <div class="img-box">
+              <img id="myImg" />
             </div>
           </div>
-          <input type="button" value="upload" class="upload" id="upload" />
-          <input type="file" class="file" />
-          <input
-            type="button"
-            value="Download"
-            class="upload download"
-            id="download"
-          />
+          <div>
+            <label for="files" class="upload">Upload Photo</label>
+            <input
+              id="files"
+              style="visibility: hidden; display: none;"
+              type="file"
+            />
+          </div>
+
+          <label type="button" class="upload download" id="download"
+            >Download</label
+          >
         </div>
         <div class="col-lg-3 info tap-fram">
           <div class="fram-box">
@@ -86,5 +82,25 @@
         <label for=""></label>
       </div>
     </div>
+    <!-- script -->
+
+    <script>
+      window.addEventListener("load", function () {
+        document
+          .querySelector('input[type="file"]')
+          .addEventListener("change", function () {
+            if (this.files && this.files[0]) {
+              var img = document.querySelector("img"); // $('img')[0]
+              img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+              img.onload = imageIsLoaded;
+            }
+          });
+      });
+
+      // function imageIsLoaded() {
+      //   alert(this.src); // blob url
+      //   // update width and height ...
+      // }
+    </script>
   </body>
 </html>

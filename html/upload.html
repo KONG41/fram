@@ -4,43 +4,48 @@
     <title>
       jQuery Changing background-image CSS Property
     </title>
-    <style>
-      .box {
-        width: 700px;
-        height: 220px;
-        border: 2px solid black;
-        background-repeat: no-repeat;
-        background-image: url("https://www.geeksforgeeks.org/wp-content/uploads/javascript-768x256.png");
-      }
-      h1 {
-        color: green;
-      }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
     <script>
-      $(document).ready(function () {
-        // Change background image of a div by clicking on the button
-        $("button").click(function () {
-          var imageUrl =
-            "https://www.geeksforgeeks.org/wp-content/uploads/jquery-banner-768x256.png";
-          $(".box").css("background-image", "url(" + imageUrl + ")");
-        });
+      window.addEventListener("load", function () {
+        document
+          .querySelector('input[type="file"]')
+          .addEventListener("change", function () {
+            if (this.files && this.files[0]) {
+              var img = document.querySelector("img"); // $('img')[0]
+              img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+              img.onload = imageIsLoaded;
+            }
+          });
       });
+
+      function imageIsLoaded() {
+        alert(this.src); // blob url
+        // update width and height ...
+      }
     </script>
   </head>
 
   <body>
-    <center>
-      <h1>GeeksforGeeks</h1>
-      <h3>
-        jQuery Changing background-image CSS Property
-      </h3>
-      <div class="box"></div>
-      <p>
-        <button type="button">
-          Change Background Image
-        </button>
-      </p>
-    </center>
+    <input type="file" />
+    <br /><img id="myImg" src="#" alt="your image" height="200" width="100" />
+
+    <script>
+      window.addEventListener("load", function () {
+        document
+          .querySelector('input[type="file"]')
+          .addEventListener("change", function () {
+            if (this.files && this.files[0]) {
+              var img = document.querySelector("img"); // $('img')[0]
+              img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+              img.onload = imageIsLoaded;
+            }
+          });
+      });
+
+      function imageIsLoaded() {
+        alert(this.src); // blob url
+        // update width and height ...
+      }
+    </script>
   </body>
 </html>
