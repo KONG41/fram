@@ -81,3 +81,42 @@ body {
   background-color: black;
   float: left;
 }
+.upload {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 10%;
+  border: rgba(255, 105, 180, 0.377) 1px solid;
+  position: absolute;
+  bottom: 15%;
+  left: 32.5%;
+}
+.download {
+  left: 63%;
+}
+.file {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 10%;
+  border: rgba(255, 105, 180, 0.377) 1px solid;
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+}
+.fram-box img {
+  width: 100%;
+  height: 100%;
+}
+.button {
+  float: left;
+  background-color: rgb(21, 211, 53);
+  color: azure;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 64%;
+  margin-top: 52.5%;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: crimson;
+  color: azure;
+}
