@@ -85,6 +85,9 @@
         <label for=""></label>
       </div>
     </div>
+    <div>
+      hello
+    </div>
     <!-- script -->
 
     <script>
@@ -105,9 +108,10 @@
         function (e) {
           e = e || window.event;
           var target = e.target;
+          var img = document.getElementById("output_fram");
           if (target.tagName == "IMG") {
             // console.log(target.src);
-            var img = document.getElementById("output_fram");
+
             img.src = target.src;
           }
         },
