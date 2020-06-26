@@ -30,8 +30,9 @@
       <div class="row bg-img">
         <div class="col-lg info info-color">
           <div class="box">
-            <div class="img-box" id="output">
+            <div class="out-line">
               <img id="output_fram" />
+              <div class="img-box" id="output"></div>
             </div>
           </div>
 
@@ -102,6 +103,17 @@
     <!-- script -->
 
     <script>
+      $(document).ready(function () {
+        $(window).bind("scroll", function () {
+          var navHeight = $(window).height() - 70;
+          if ($(window).scrollTop() > navHeight) {
+            $("nav").addClass("fixed");
+          } else {
+            $("nav").removeClass("fixed");
+          }
+        });
+      });
+      //
       $(document).ready(function () {
         $("#hide").click(function () {
           $("#frame-box").hide();
