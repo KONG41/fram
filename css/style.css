@@ -17,6 +17,7 @@ body {
   text-align: center !important;
   margin: 0;
   width: 100% !important;
+  float: left;
 }
 .my-brand {
   text-decoration: none;
@@ -169,9 +170,10 @@ body {
 }
 .exit {
   background-color: rgba(255, 255, 255, 0.178);
-  position: absolute;
-  top: 15px;
-  left: 0;
+
+  position: sticky;
+  float: left;
+  top: 30px;
   cursor: pointer;
   -webkit-box-shadow: 3px 0px 24px -11px rgb(41, 38, 41);
   -moz-box-shadow: 3px 0px 24px -11px rgba(41, 38, 41, 1);
