@@ -1,10 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .my-main-container {
   height: 960px;
-  background-color: whitesmoke;
+  background-color: #1c2331;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -12,28 +13,47 @@ body {
 }
 .my-navbar-color {
   display: block !important;
-  background-color: whitesmoke !important;
+  background-color: #1c2331 !important;
   text-align: center !important;
   margin: 0;
+  width: 100% !important;
 }
 .my-brand {
   text-decoration: none;
   font-family: "Metal Mania", cursive;
   padding: 10px;
   font-size: 30px !important;
+  color: aliceblue !important;
 }
 .info {
   width: 100%;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   height: 900px;
   position: relative;
 }
-.info-color {
-  background: rgb(255, 182, 193);
+/* .info-color {
+  background-image: url(/image/3c-gradient-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.bg-img {
+  background-image: url(/image/3c-gradient-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .tap-fram {
-  background-color: rgb(119, 114, 114);
+  /* background-color: rgb(119, 114, 114); */
+  /* background: rgb(255, 182, 193); */
+
   overflow: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 .box {
   background-color: whitesmoke;
@@ -50,7 +70,7 @@ body {
 .fram-box {
   width: 300px;
   height: 300px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.178);
   margin-left: 50%;
   transform: translate(-50%, 0);
   margin-top: 10px;
@@ -82,7 +102,7 @@ body {
 .about {
   width: 100%;
   height: 400px;
-  background-color: black;
+  background-color: #1c2331;
   float: left;
 }
 .upload {
@@ -98,6 +118,10 @@ body {
 }
 .download {
   left: 61.5%;
+}
+.show {
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .file {
   color: white;
@@ -125,4 +149,24 @@ body {
 .button:hover {
   background-color: crimson;
   color: azure;
+}
+.exit {
+  background-color: rgba(255, 255, 255, 0.178);
+  position: absolute;
+  top: 15px;
+  left: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 0px 24px -11px rgb(41, 38, 41);
+  -moz-box-shadow: 3px 0px 24px -11px rgba(41, 38, 41, 1);
+  box-shadow: 3px 0px 24px -11px rgba(41, 38, 41, 1);
+  border-radius: 50%;
+}
+.exit i {
+  padding: 10px;
+  font-size: 25px;
+  color: rgba(196, 26, 54, 0.39);
+}
+.exit:hover i {
+  font-size: 35px;
+  color: rgba(196, 26, 54, 0.651);
 }
