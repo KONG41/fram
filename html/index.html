@@ -30,7 +30,9 @@
       </nav>
       <div class="row bg-img">
         <div class="col-lg info info-color">
-          <div class="box">
+          <div class="box" id="box">
+            <i class="far fa-square" id="zoom-in"></i>
+            <i class="far fa-minus-square" id="zoom-out"></i>
             <!-- <div class="out-line"> -->
 
             <div class="img-box" id="output">
@@ -131,13 +133,12 @@
 
     <script>
       $(document).ready(function () {
-        $(window).bind("scroll", function () {
-          var navHeight = $(window).height() - 70;
-          if ($(window).scrollTop() > navHeight) {
-            $("nav").addClass("fixed");
-          } else {
-            $("nav").removeClass("fixed");
-          }
+        var n;
+        $("#zoom-in").click(function () {
+          $(".box").addClass("zoom");
+        });
+        $("#zoom-out").click(function () {
+          $(".box").removeClass("zoom");
         });
       });
       //
