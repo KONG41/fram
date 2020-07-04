@@ -39,7 +39,6 @@ body {
   background-repeat: no-repeat;
 } */
 .bg-img {
-  background-image: url(/image/3c-gradient-background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,7 +106,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/image/download.png);
   position: relative;
   position: absolute;
 }
